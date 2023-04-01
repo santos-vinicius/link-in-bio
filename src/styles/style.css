@@ -60,14 +60,6 @@ ul {
   list-style: none;
 }
 
-li {
-  border-radius: 5px;
-  padding: 15px;
-  background: rgba(170, 170, 170, 0.062);
-  text-align: center;
-  cursor: pointer;
-  margin-bottom: 1rem;
-}
 
 a {
   text-decoration: none;
@@ -84,3 +76,91 @@ footer {
 .footer-github {
   margin-top: 0.5rem;
 }
+
+/* -------- li default style  ------------*/
+ /* li {
+  border-radius: 5px;
+  padding: 15px;
+  background: rgba(170, 170, 170, 0.062);
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}  */
+
+ /* ------------bi pride hover effect ---------- */
+
+ li {
+  padding: 0.9em 1.6em;
+  border: 0.5px solid rgba(46, 46, 46, 0.336) ;
+  outline: none;
+  background-color: #0F0F0F;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+ }
+ 
+ li::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0F0F0F;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+ }
+ /* glow */
+ li::before {
+  content: "";
+  background: linear-gradient(
+     45deg,
+     #FF0000, #002BFF, #FF00C8, #002BFF,
+       #FF0000, #002BFF, #FF00C8, #002BFF
+ );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
+  filter: blur(6px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .5s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+ }
+ 
+ @keyframes glowing {
+  0% {
+   background-position: 0 0;
+  }
+ 
+  50% {
+   background-position: 400% 0;
+  }
+ 
+  100% {
+   background-position: 0 0;
+  }
+ }
+ 
+ /* hover */
+ li:hover::before {
+  opacity: 1;
+ }
+ 
+ li:active:after {
+  background: transparent;
+ }
+ 
+ li:active {
+  color: #000;
+  font-weight: bold;
+ }
