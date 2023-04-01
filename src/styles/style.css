@@ -156,11 +156,3 @@ footer {
   opacity: 1;
  }
  
- li:active:after {
-  background: transparent;
- }
- 
- li:active {
-  color: #000;
-  font-weight: bold;
- }
