@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" src="./.github/banner.jpg" />
+  <img align="center" src="./.github/banner.jpg" alt="link in bio banner" />
 </p>
 
 <h2 align="center">Link in Bio</h2>
@@ -21,7 +21,7 @@
 ### 🏠 [Homepage](https://links.santosvinicius.dev/)
 
 <p align="center">
-  <img align="center" src="./.github/links.gif" />
+  <img align="center" src="./.github/links.gif" alt="gif demostration" />
 </p>
 
 ### 💟 Benefits of making your own "link-in-bio" page:
